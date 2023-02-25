@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --background-color: #58534f;
+  --first-color: #fff;
+  --ring-color: #8f8985;
+  --top-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #acacac;
+  /* background: var(--background-color);*/
+  overflow: hidden;
+  -webkit-animation: colorchange 60s infinite;
+  animation: colorchange 60s infinite;
+  transition: 0.4s;
+}
+/* @-webkit-keyframes colorchange {
+  0% {
+    background: #2672e4;
+  }
+  25% {
+    background: #78281f;
+  }
+  50% {
+    background: #117a65;
+  }
+  75% {
+    background: #dc7633;
+  }
+  100% {
+    background: #9b59b6;
+  }
+}
+@keyframes colorchange {
+  0% {
+    background: #2672e4;
+  }
+  25% {
+    background: #78281f;
+  }
+  50% {
+    background: #117a65;
+  }
+  75% {
+    background: #dc7633;
+  }
+  100% {
+    background: #9b59b6;
+  }
+} */
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.container .header:before {
+  content: "NIKE";
+  position: absolute;
+  top: 58%;
+  left: 60%;
+  color: rgba(15, 10, 10, 0.604);
+  font-size: 200px;
+  opacity: 0.1;
+  letter-spacing: 15px;
+  font-weight: 700;
+  z-index: -1;
+  font-style: italic;
+}
+.container .header i {
+  color: var(--first-color);
+  cursor: pointer;
+  font-size: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  margin-top: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.container .header p {
+  color: var(--first-color);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+/* ! ROW - SECTION */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 65vh;
+}
+.container .col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+  width: auto;
+  height: 50%;
+}
+.container .row .col-2 h1 {
+  color: var(--first-color);
+  font-size: 60px;
+  letter-spacing: 3px;
+  line-height: 60px;
+  font-weight: bolder;
+  margin: 25px 0;
+}
+.container .row .col-2 p {
+  color: var(--first-color);
+  font-size: 14px;
+  line-height: 30px;
+}
+.container .row .col-2 .btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--background-color);
+  box-shadow: 0px 0px 10px white;
+  padding: 8px 20px;
+  background-color: #fff;
+  border: 1px solid var(--first-color);
+  border-radius: 35px;
+  margin-top: 45px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 1s all ease;
+  opacity: 0.7;
+}
+.container .row .col-2 .btn:hover {
+  opacity: 0.9;
+}
+/* RING - SECTION */
+.col-2 .ring img {
+  width: 100%;
+  max-width: 580px;
+}
+#circle-ring {
+  padding-left: 15%;
+}
+.col-2 .ring {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.col-2 .ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--ring-color); /* #fff12e;*/
+  border-right: 3px solid var(--ring-color);
+  border-radius: 50%;
+  z-index: -1;
+  animation: returnCircle 10s linear infinite;
+}
+.col-2 .ring .circle {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  z-index: -1;
+  animation: return 10s linear infinite;
+}
+.col-2 .ring .circle:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -9px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--top-color);
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--top-color);
+}
+.col-2 .ring-two {
+  position: relative;
+  top: -450px;
+  left: -50px;
+  width: 500px;
+  height: 500px;
+  background-color: transparent;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.col-2 .ring-two:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-bottom: 3px solid var(--ring-color);
+  border-left: 3px solid var(--ring-color);
+  border-radius: 50%;
+  animation: returnCircle2 10s linear infinite;
+}
+.col-2 .ring-two .circle-two {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: return2 10s linear infinite;
+}
+.col-2 .ring-two .circle-two:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--top-color);
+  box-shadow: 0 0 20px var(--top-color);
+  border-radius: 50%;
+}
+.footer {
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  padding: 3px;
+}
+.color-page #btn1 {
+  color: #2672e4;
+  font-size: 20px;
+}
+.color-page #btn2 {
+  color: #78281f;
+  font-size: 20px;
+}
+.color-page #btn3 {
+  color: #117a65;
+  font-size: 20px;
+}
+.color-page #btn4 {
+  color: #dc7633;
+  font-size: 20px;
+}
+.color-page #btn5 {
+  color: #9b59b6;
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+  .row {
+    width: 55%;
+  }
+  .col-2 {
+    margin-bottom: 120%;
+  }
+  .col-2:nth-child(1) {
+    transform: translate(30%, -5%);
+  }
+}
+@keyframes returnCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes return {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes returnCircle2 {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+@keyframes return2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

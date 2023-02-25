@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Dynamic Web Site Case</title>
+  </head>
+  <body id="kutu">
+    <div class="container">
+      <header class="header">
+        <div class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">
+          <div class="logo-two">
+            <img src="images/nike_logo.png" alt="" />
+          </div>
+          <p>NIKE</p>
+        </div>
+        <div class="shop-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-2">
+          <h1>Style Shoes.</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Repudiandae et eveniet iste ea sunt iusto ullam dolore tenetur,
+            illum, facere quae quam, tempora hic molestias?
+          </p>
+          <a href="#" id="" class="btn">Explore Now</a>
+        </div>
+        <div class="col-2" id="circle-ring">
+          <div class="ring">
+            <img src="images/shoes_logo.png" alt="" />
+            <span class="circle"></span>
+          </div>
+          <div class="ring-two">
+            <span class="circle-two"> </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="color-page">
+          <i class="fa-solid fa-stop" id="btn1"></i>
+          <i class="fa-solid fa-stop" id="btn2"></i>
+          <i class="fa-solid fa-stop" id="btn3"></i>
+          <i class="fa-solid fa-stop" id="btn4"></i>
+          <i class="fa-solid fa-stop" id="btn5"></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      var btn1 = document.querySelector("#btn1");
+      var btn2 = document.querySelector("#btn2");
+      var btn3 = document.querySelector("#btn3");
+      var btn4 = document.querySelector("#btn4");
+      var btn5 = document.querySelector("#btn5");
+
+      btn1.onclick = function () {
+        kutu.style.background = "#2672e4"; //div yazzeminı rengini kırmızı yap
+      };
+
+      btn2.onclick = function () {
+        kutu.style.background = "#78281f"; //div yazı rengini beyaz yap
+      };
+
+      btn3.onclick = function () {
+        kutu.style.background = "#117a65"; //div yazı rengini beyaz yap
+      };
+
+      btn4.onclick = function () {
+        kutu.style.background = "#dc7633"; //div yazı rengini beyaz yap
+      };
+      btn5.onclick = function () {
+        kutu.style.background = "#9b59b6"; //div yazı rengini beyaz yap
+      };
+    </script>
+  </body>
+</html>
